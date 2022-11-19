@@ -12,3 +12,15 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: /var/wordpress-content
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-content
+spec:
+  storageClassName: wordpress-content
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 25Gi
