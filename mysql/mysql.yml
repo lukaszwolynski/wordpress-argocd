@@ -32,6 +32,9 @@ spec:
       containers:
       - name: mysql
         image: mysql:8.0.31
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: zaq1@WSX#EDC
         ports:
         - containerPort: 3389
           name: myssql
