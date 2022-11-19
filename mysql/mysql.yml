@@ -21,7 +21,7 @@ spec:
     matchLabels:
       app: mysql 
   serviceName: "mysql-service"
-  replicas: 3
+  replicas: 1
   minReadySeconds: 10
   template:
     metadata:
@@ -40,10 +40,10 @@ spec:
           name: myssql
   volumeClaimTemplates:
   - metadata:
-      name: wordpress-application
+      name: wordpress-mysql
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "hostpath"
+      storageClassName: "hostpath-mysql"
       resources:
         requests:
           storage: 2Gi
