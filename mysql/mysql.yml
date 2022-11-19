@@ -37,7 +37,7 @@ spec:
           name: myssql
   volumeClaimTemplates:
   - metadata:
-      name: mysql
+      name: wordpress-application
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "hostpath"
