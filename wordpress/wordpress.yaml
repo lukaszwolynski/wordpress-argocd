@@ -27,6 +27,7 @@ spec:
         persistentVolumeClaim:
           claimName: wordpress-content
 ---
+apiVersion: v1
 kind: Service
 metadata:
   labels:
