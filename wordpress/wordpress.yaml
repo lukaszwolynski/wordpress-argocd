@@ -19,6 +19,13 @@ spec:
         image: wordpress:php8.1-fpm
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: wordpress-content
+      volumes:
+      - name: wordpress-content
+        persistentVolumeClaim:
+          claimName: wordpress-content
 ---
 kind: Service
 metadata:
