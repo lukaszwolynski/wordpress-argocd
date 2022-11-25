@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:php8.1-fpm
+        image: wordpress:5.6.0-php7.4
         envFrom:
         - secretRef:
             name: wordpress-credentials
