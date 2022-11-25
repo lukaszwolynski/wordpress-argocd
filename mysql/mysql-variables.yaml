@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-variables
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: zaq1@WSX#EDC
+  MYSQL_DATABASE: wordpress
+  MYSQL_PASSWORD: wordpress-password123!
+  MYSQL_USER: wordpress

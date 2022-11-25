@@ -20,7 +20,7 @@ spec:
   selector:
     matchLabels:
       app: mysql 
-  serviceName: "mysql-service"
+  serviceName: mysql-service
   replicas: 1
   minReadySeconds: 10
   template:
@@ -32,9 +32,9 @@ spec:
       containers:
       - name: mysql
         image: mysql:8.0.31
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: zaq1@WSX#EDC
+        envFrom:
+        - secretRef:
+            name: mysql-variables
         ports:
         - containerPort: 3389
           name: myssql
