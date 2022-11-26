@@ -13,7 +13,10 @@ spec:
   - host: lukaszwolynski.com
     http:
       paths:
-      - path: /
+      - pathType: Prefix
+        path: /
         backend:
-          serviceName: wordpress-service
-          servicePort: 80   
+          service: 
+            name: wordpress-service
+            port:
+              number: 80
